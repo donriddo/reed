@@ -1,0 +1,63 @@
+extends layout-home
+
+block content
+    <div class="container-fluid">
+    form(action="/account/edit", method="post")
+        div.form-group
+            label(for="fullname") Full Name
+            input(type="text", value=fullname, name="fullname", id="fullname", class="form-control", maxlength="30" required)
+        div.form-group
+            label(for="tel") Mobile Phone Number
+            input(type="tel", value=tel, name="tel", id="tel", class="form-control", required)
+        div.form-group
+            label(for="bio") Bio
+            input(type="text" value=bio, name="bio", id="bio", class="form-control", maxlength="40", required)
+        div.form-group
+            label(for="password") Enter your Password for verification
+            input(type="password", name="password", id="password", class="form-control" required)
+        button(type="submit" class="btn btn-success") Update your Profile
+    
+    br
+    button#changeDob(type="button", class="btn btn-info") Change Date of Birth
+    br
+    br
+    form(action="/account/edit/dob", method="post", style="display: none", id="dobForm")
+        div.form-group
+            label(for="email") Edit Date of Birth
+            input(type="date", name="dob", id="dob", class="form-control", required)
+        div.form-group
+            label(for="password") Enter your Password for verification
+            input(type="password", name="password", id="password", class="form-control", required)
+        button(type="submit", class="btn btn-success") Update your Date of Birth
+        
+    br
+    button#changeMail(type="button", class="btn btn-info") Change Email
+    br
+    br
+    form(action="/account/edit/email", method="post", style="display: none", id="mailForm")
+        div.form-group
+            label(for="email") Edit Email
+            input(type="text", value=email, name="email", id="email", class="form-control", required)
+        div.form-group
+            label(for="password") Enter your Password for verification
+            input(type="password", name="password", id="password", class="form-control", required)
+        button(type="submit", class="btn btn-success") Update your Email
+        
+    br
+    button#changePass(type="button", class="btn btn-info") Change Password
+    br
+    br
+    form(action="/account/edit/password", method="post", style="display: none", id="passForm", onsubmit="return validatePass()")
+        div.form-group
+            label(for="password") Input your current Password
+            input(type="password", name="password", id="password", class="form-control", required)
+        div.form-group
+            label(for="password") Input your New Password
+            input(type="password", name="newPass", id="newPass", class="form-control", required)
+        div.form-group
+            label(for="password") Retype your New Password
+            input(type="password", name="retype", id="retype", class="form-control", required)
+            span#match
+        button(type="submit", class="btn btn-success") Update your Password
+    
+    script(src="/javascripts/edit.js")

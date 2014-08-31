@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Fuck CcHub!!!</title>
+    </head>
+    <body style="background-color: tan">
+        <h1 style="font-family: Garamond; font-size: 30px; color: red"> Fuck CcHub</h1>
+    
+        <input id="box" style="border: 2px solid violet;" placeholder="input ur operation"/>
+        <span id="exec" style="border-radius: 5px; background-color: green"> &nbsp;Execute it&nbsp;</span>
+        <span id="last" style="border-radius: 5px; background-color: green"> &nbsp;Execute ur last operation.&nbsp;</span>
+        <script>
+            var op;
+            document.getElementById('exec').onclick = function() {
+                op = document.getElementById('box').value;
+                alert('your operation has been saved: ' + op);
+            }
+            document.getElementById('last').onclick = function() {
+                alert('your last operation was: ' + op + ' which equals: ' + eval(op));
+            }
+        
+        
+        </script>
+        <p style="font-family: cursive; color: blue; font-size: 20px">* Note: you can hack my page. it depends on how techy u are. go on and get wild, embed javascript into my box and execute.<br><br><br><br>
+        For practice: enter <span style="color: purple; font-family: sans-serif; font-size: 15px"> alert("i hacked your page");</span> into the box and click <span style="color: yellow; font-family: Arial">Execute it</span>, then click <span style="color: yellow; font-family: Arial">Execute ur last operation</span> to see the magic. 
+        </p>
+        <div id='footer' style="position: fixed; top: 1000; bottom: 0;">     
+            <hr>
+            &copy; by : Donriddo &trade; 
+        </div>
+    </body>
+</html>

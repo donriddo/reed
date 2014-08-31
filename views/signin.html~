@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="shortcut icon" href="icon.ico"/>
+	<link rel="stylesheet" href="dist/css/bootstrap.css" media="screen"/>
+	<title>Sign In</title>
+	</head>
+
+    <body> 
+            <nav id="myNavbar" class="navbar navbar-default navbar-in" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex1-collapse">
+                        <span class="sr-only">What to do</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand">Reed</a>
+                    </div>
+                       <div class="collapse navbar-collapse" id="navbar-ex1-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="welcome.html"><span class="glyphicon glyphicon-home">&nbsp;Home</span></a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-user">&nbsp;SignUp</span></a></li>
+                                <li class="active"><a href="#"><span class="glyphicon glyphicon-log-in">&nbsp;SignIn</span></a></li>
+                                <li><a href="#">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        <div class="container-fluid">
+           <form>
+
+                <div class="form-group">
+
+                    <label for="inputEmail">Email</label>
+
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="inputPassword">Password</label>
+
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+
+                </div>
+
+                <div class="checkbox">
+
+                    <label><input type="checkbox"> Remember me</label>
+
+                </div>
+
+                <button type="submit" class="btn btn-success">Login</button>
+
+            </form>
+

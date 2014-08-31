@@ -1,0 +1,20 @@
+extends layout-home
+
+block content
+    <div class="container-fluid">
+    h1= title
+    - if (empty === false) {
+    -   for (var i in friends) {
+    -       var since =  Date(friends[i].requests['friendshipDate']);
+            div.row.display-user
+                div.col-xs-3
+                    <img src=#{friends[i].picUrl} class="img-circle" height="50px">
+                div.col-xs-9
+                    span.lead <a href="/account/friends/#{friends[i]._id}">#{friends[i].fullname}</a>
+                    br
+                    small= 'Friends since: ' + since
+                
+    -   }
+    -} else {
+        = 'false o'
+    -}

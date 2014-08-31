@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    div(id="error", class="alert alert-warning")
+        a(href="#", class="close", data-dismiss="alert") &times;
+        p#errMsg #{error}
+    br
+    include signup-two.html

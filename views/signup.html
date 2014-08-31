@@ -1,0 +1,78 @@
+<div class="container-fluid">
+    <h1 class="jumbotron">Account Information</h1>
+<!-- The below script is just for safety purpose. all inputs are already 'required'. but it spectacularly validates the password fields. so feel free to comment it out, but just make sure to check that the two password fields match before submitting -->
+    <script>
+        function validateForm() { 
+            var isError = 0;
+            if (document.getElementById('username').value === '') {
+                document.getElementById('validUser').innerHTML = "* Please input a username";
+                isError += 1;
+            } else {
+                document.getElementById('validUser').innerHTML = '';
+            }
+            if (document.getElementById('email').value === '') {
+                document.getElementById('validMail').innerHTML = "* Please input a valid Email";
+                isError += 1;
+            } else {
+                document.getElementById('validMail').innerHTML = '';
+            }
+            if (document.getElementById('password').value === '') {
+                document.getElementById('validPass').innerHTML = "* Please input a Password";
+                isError += 1;
+            } else {
+                document.getElementById('validPass').innerHTML = '';
+                if (document.getElementById('retype').value !== document.getElementById('password').value) {
+                    document.getElementById('validRetype').innerHTML = "* Your passwords does not match";
+                    isError += 1;
+                } else {
+                    document.getElementById('validRetype').innerHTML = '';
+                }
+            }
+            if (isError === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+    <form name="form" method="post" action="/signup" onsubmit="return validateForm()" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input required id="username" name="username" class="form-control" type="text" placeholder="Choose a suitable username">
+                <span id="validUser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" class="form-control" type="email" placeholder="Email" required>
+                <span id="validMail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" class="form-control" type="password" placeholder="Password" name="password" required>
+                <span id="validPass" class="text-danger"></span>
+                <b><span id="strength"></span></b>
+            </div>
+            
+            <div class="form-group">
+                <label for="retype">Retype Password</label>
+                <input id="retype" class="form-control" type="password" placeholder="Retype Password" required>
+                <span id="validRetype" class="text-danger"></span>
+            </div>
+            
+            <button id="submit" type="submit" class="btn btn-success">Proceed to next step &raquo;</button>
+    </form>
+<!--
+    <script>
+        document.getElementById('password').onchange = function() {
+            if (document.getElementById('password').value.length < 6 && document.getElementById('password').value != "") {
+                document.getElementById('strength').style.color = "red";
+                document.getElementById('strength').innerHTML = "weak";
+            } else if (document.getElementById('password').value.length == 6 || document.getElementById('password').value.length < 8) {
+                document.getElementById('strength').style.color = "yellow";
+                document.getElementById('strength').innerHTML = "medium";
+            } else {
+                document.getElementById('strength').style.color = "green";
+                document.getElementById('strength').innerHTML = "strong";
+            }
+        }
+    </script>-->

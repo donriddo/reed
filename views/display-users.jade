@@ -1,0 +1,14 @@
+extends layout-home
+
+block content
+    <div class="container-fluid">
+    - users.forEach(function (user) { 
+        div.row.display-user
+            div.col-xs-4
+                <img src=#{user.picUrl} class="img-circle" height="50px"> 
+            div.col-xs-6
+                span #{user.fullname} 
+            div.col-xs-2
+                div(class="btn btn-info")
+                    <a href="/account/add/friend/#{user._id}"> <span style="color: blue" class="glyphicon glyphicon-plus"></span></a>
+    -})

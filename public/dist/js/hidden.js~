@@ -1,0 +1,9 @@
+if (document.getElementById("title").innerHTML == 'Reed') {
+   document.getElementById('home').className = 'active';
+}
+if (document.getElementById("title").innerHTML == 'Sign in') {
+   document.getElementById('in').className = 'active';
+}
+if (document.getElementById("title").innerHTML == 'Sign up') {
+   document.getElementById('up').className = 'active';
+}

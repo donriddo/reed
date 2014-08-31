@@ -1,0 +1,13 @@
+extends layout-home
+
+block content
+    <div class="container-fluid">
+    p.lead Are you sure you want to delete your account?
+    form(action="/account/delete", method="post")
+        div.form-group
+            label(for="password") Enter your password for verification
+            input(type="password", class="form-control", name="password", id="password", required)
+        button(type="submit", class="btn btn-lg btn-danger", style="float : left; width: 25%") Delete
+    p(style="float: right; width: 25%") <a class="btn btn-lg btn-warning" href="/home">Cancel</a>
+    br
+    br

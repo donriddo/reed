@@ -1,0 +1,56 @@
+.navbar-custom, 
+.navbar-custom a {
+    color: #0b66ad;
+    background-color: #66afe9;
+}
+
+.navbar-custom .navbar-brand {
+    font-size: 24px;
+    color: #0b66ad;
+    font-weight: bold;
+    text-shadow: -2px 2px 0 #999;
+}
+
+.navbar-custom .navbar-header > .navbar-toggle {
+    background-color: #5394c6;
+}
+
+.navbar-custom .navbar-header > .navbar-toggle > .icon-bar {
+    background-color: #0b66ad;
+}
+
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+    color: #000;
+    background-color: #acd4f4;
+}
+.navbar-custom .navbar-nav a:focus,
+.navbar-custom .navbar-nav a:hover {
+    color: #000;
+    background-color: #66afe9;
+}
+
+@media screen and (min-width: 800px) {
+    .profile {
+        float: left;
+    }
+    .profile-pic {
+        width: 70%;
+        height: 135px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .profile-pic {
+        width: 100%;
+    }
+}
+
+.display-user {
+/*    margin: 15px;*/
+    background-color: #f9f9f9;
+    border: 2px solid #eee;
+    padding: 5px;
+    border-radius: 7px;
+}

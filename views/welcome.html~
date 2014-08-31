@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="shortcut icon" href="icon.ico"/>
+	<link rel="stylesheet" href="dist/css/bootstrap.css" media="screen"/>
+	<style>
+	    #sIn  { display: none}
+	    .active {background-color: green}
+	    .container-fluid  .row { margin: 0;}
+	</style>
+	<title>Welcome to Reed</title>
+	</head>
+
+    <body> 
+            <nav id="myNavbar" class="navbar navbar-default navbar-in" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex1-collapse">
+                        <span class="sr-only">What to do</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand">Reed</a>
+                    </div>
+                       <div class="collapse navbar-collapse" id="navbar-ex1-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="#"><span class="glyphicon glyphicon-home">&nbsp;Home</span></a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-user">&nbsp;SignUp</span></a></li>
+                                <li><a href="signin.html"><span class="glyphicon glyphicon-log-in">&nbsp;SignIn</span></a></li>
+                                <li><a href="#">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            <div class="container-fluid">
+                <div class="jumbotron"> 
+                    <h1 align="center">Welcome to Reed<br><small>The Guruz Hideout</small></h1>
+                    <p>Reed is a platform whereby you mingle with guruz, learn from them and eventually you become one of them.</p>
+                    <blockquote class="lead pull-right text-success"><p>Birds of a feather flocks together</p><small>by <cite>Taiwo Ridwan a.k.a Don_riddo</cite></small></blockquote>
+                    <p><a class="btn btn-lg btn-success" href="#">Learn more &raquo;</a></p>
+                </div>
+        <hr>
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <footer>
+
+                    <p>&copy; Copyright 2014 Reed</p>
+
+                </footer>
+
+            </div>
+
+        </div>
+        </div>
+    <script src="dist/js/jquery.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/hidden.js"></script>
+    </body>
+</html>
+

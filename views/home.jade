@@ -1,0 +1,15 @@
+extends layout-home
+
+block content
+    <div class="container-fluid">
+    div(class="row")
+        div(class="col-xs-3 profile")
+            img(src=picUrl, height="120px", class="img-circle profile-pic", alt=name)
+        div(class="col-xs-9 profile")
+            p.lead #{fullname}
+            p C.E.O @ #{email}
+            p Username: #{name}
+            p Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#{email}
+    
+    hr
+    p.hero You don't have any posts yet because there are no friends on your list
