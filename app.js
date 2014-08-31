@@ -23,7 +23,7 @@ app.use(express.bodyParser({
     uploadDir: './public/userPhotos'
 }));
 app.use(express.methodOverride());
-app.use(express.cookieParser('r1db4n'));
+app.use(express.cookieParser('donriddo'));
 app.use(express.cookieSession());
 app.use(express.session());
 app.use(app.router);
